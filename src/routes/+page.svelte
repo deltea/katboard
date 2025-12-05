@@ -2,6 +2,10 @@
   import Key from "$lib/components/Key.svelte";
 </script>
 
+<svelte:head>
+  <title>meowboard</title>
+</svelte:head>
+
 <main class="min-h-screen flex flex-col bg-[url('/background.svg')] bg-repeat">
   <nav class="flex justify-between items-center hnav pr-5">
     <a href="/" class="text-2xl font-borel font-black -mb-4 flex gap-0.5 items-center group bg-dark rounded-br-3xl pr-6 pl-4 py-4 shadow-base">
