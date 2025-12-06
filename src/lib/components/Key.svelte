@@ -43,6 +43,7 @@
 
   function playSound() {
     sound.play();
+    keyPressed();
   }
 
   onMount(() => {
@@ -51,7 +52,6 @@
         event.preventDefault();
         isDown = true;
         playSound();
-        keyPressed();
       }
     };
 
@@ -78,6 +78,7 @@
     style:left={`${position * 68}px`}
     class="absolute -translate-y-8 top-0 h-2/3 w-16 rounded-2xl outline-none shadow-base bg-dark z-10 active:shadow-none active:-translate-y-[27px] duration-100 flex flex-col justify-end cursor-pointer {isDown ? "shadow-none -translate-y-[27px]" : ""}"
   >
+    <span class="pb-2 text-dark-1">{keymap}</span>
     <span class="pb-2 text-fg font-bold">{label}</span>
   </button>
 {:else}
@@ -85,6 +86,7 @@
     onmousedown={playSound}
     class="h-full rounded-2xl outline-none shadow-muted w-16 active:shadow-none active:translate-y-[5px] duration-100 flex flex-col justify-end bg-fg cursor-pointer {isDown ? "shadow-none translate-y-[5px]" : ""}"
   >
+    <span class="pb-2 text-muted">{keymap}</span>
     <span class="pb-2 text-dark font-bold">{label}</span>
   </button>
 {/if}

@@ -55,13 +55,20 @@
 
       <div class="flex gap-4 duration-200 {visualizerOpen ? "translate-y-16" : ""}">
         <div class="flex flex-col justify-center gap-4">
-          <button
+          <!-- <button
             aria-label="volume"
             onclick={() => (muted = !muted)}
             class="cursor-pointer flex justify-center items-center rounded-2xl bg-accent shadow-accent grow w-16 active:shadow-none active:translate-y-[5px] duration-100"
           >
             <iconify-icon icon={muted ? "mingcute:volume-off-fill" : "mingcute:volume-fill"} class="text-3xl"></iconify-icon>
-          </button>
+          </button> -->
+          <a
+            aria-label="github"
+            href="https://github.com/deltea/meowboard"
+            class="cursor-pointer flex justify-center items-center rounded-2xl bg-accent shadow-accent grow w-16 active:shadow-none active:translate-y-[5px] duration-100"
+          >
+            <iconify-icon icon="mingcute:github-fill" class="text-3xl"></iconify-icon>
+          </a>
           <button
             aria-label="palette"
             class="cursor-pointer flex justify-center items-center rounded-2xl bg-accent shadow-accent grow w-16 active:shadow-none active:translate-y-[5px] duration-100"
