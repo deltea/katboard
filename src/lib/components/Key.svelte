@@ -10,10 +10,34 @@
   } = $props();
   let isDown = $state(false);
 
+  function getRateForNote(note: string): number {
+    const noteToRate: Record<string, number> = {
+      "C4": 1.0,
+      "C#4": 1.059,
+      "D4": 1.122,
+      "D#4": 1.189,
+      "E4": 1.260,
+      "F4": 1.335,
+      "F#4": 1.414,
+      "G4": 1.498,
+      "G#4": 1.587,
+      "A4": 1.682,
+      "A#4": 1.782,
+      "B4": 1.888,
+      "C5": 2.0,
+      "C#5": 2.119,
+      "D5": 2.245,
+      "D#5": 2.378,
+      "E5": 2.520
+    };
+    return noteToRate[note.toUpperCase()] || 1.0;
+  }
+
   const sound = new Howl({
     src: ["/meowsynth.wav"],
     volume: 0.5,
     preload: true,
+    rate: getRateForNote(label)
   });
 
   function playSound() {

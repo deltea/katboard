@@ -20,7 +20,7 @@
   </nav>
 
   <div class="grow flex flex-col justify-center items-center px-24">
-    <div class="w-full aspect-5/2 flex justify-center">
+    <div class="aspect-5/3 flex justify-center">
       <div class="flex gap-1 relative">
         <Key position={0} label="C4" keymap="z" />
         <Key position={0.5} label="C#4" keymap="s" />
@@ -34,6 +34,11 @@
         <Key position={5} label="A4" keymap="n" />
         <Key position={5.5} label="A#4" keymap="j" />
         <Key position={6} label="B4" keymap="m" />
+        <Key position={7} label="C5" keymap="," />
+        <Key position={7.5} label="C#5" keymap="l" />
+        <Key position={8} label="D5" keymap="." />
+        <Key position={8.5} label="D#5" keymap=";" />
+        <Key position={9} label="E5" keymap="/" />
       </div>
     </div>
   </div>
