@@ -2,10 +2,11 @@
   import { onMount } from "svelte";
   import { Howl } from "howler";
 
-  let { position, label, keymap }: {
+  let { position, label, keymap, keyPressed }: {
     position: number,
     label: string,
-    keymap: string
+    keymap: string,
+    keyPressed: () => void
   } = $props();
   let isDown = $state(false);
 
@@ -50,6 +51,7 @@
         event.preventDefault();
         isDown = true;
         playSound();
+        keyPressed();
       }
     };
 
